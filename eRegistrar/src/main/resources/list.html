@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>eRegistrar - List Students</title>
+</head>
+<body>
+<h1>Student List</h1>
+
+<table border="1">
+    <thead>
+    <tr>
+        <th>Student Number</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="student : ${students}">
+        <td th:text="${student.studentNumber}"></td>
+        <td th:text="${student.firstName}"></td>
+        <td th:text="${student.lastName}"></td>
+        <td>
+            <a th:href="@{/eregistrar/edit/{id}(id=${student.studentId})}">Edit</a> |
+            <a th:href="@{/eregistrar/delete/{id}(id=${student.studentId})}">Delete</a>
+        </td>
+    </tr>
+    </tbody>
+</table>
+
+<a href="/eregistrar/home">Back to Home</a>
+</body>
+</html>

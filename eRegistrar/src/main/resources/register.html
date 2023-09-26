@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>eRegistrar - Register Student</title>
+</head>
+<body>
+<h1>Register New Student</h1>
+
+<form action="/eregistrar/register" method="post">
+  <label for="studentNumber">Student Number:</label>
+  <input type="text" id="studentNumber" name="studentNumber" required><br>
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" required><br>
+
+  <label for="middleName">Middle Name:</label>
+  <input type="text" id="middleName" name="middleName"><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" required><br>
+
+  <label for="cgpa">CGPA:</label>
+  <input type="text" id="cgpa" name="cgpa"><br>
+
+  <label for="enrollmentDate">Enrollment Date:</label>
+  <input type="date" id="enrollmentDate" name="enrollmentDate" required><br>
+
+  <label>Is International:</label>
+  <input type="radio" id="yes" name="isInternational" value="Yes" required>
+  <label for="yes">Yes</label>
+  <input type="radio" id="no" name="isInternational" value="No" required>
+  <label for="no">No</label><br>
+
+  <input type="submit" value="Register">
+</form>
+
+<a href="/eregistrar/home">Back to Home</a>
+</body>
+</html>

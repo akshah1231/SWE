@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>eRegistrar - Edit Student</title>
+</head>
+<body>
+<h1>Edit Student</h1>
+
+<form th:action="@{/eregistrar/edit/{id}(id=${student.studentId})}" method="post">
+  <input type="hidden" id="studentId" name="studentId" th:value="${student.studentId}">
+
+  <label for="studentNumber">Student Number:</label>
+  <input type="text" id="studentNumber" name="studentNumber" th:value="${student.studentNumber}" required><br>
+
+  <!-- Other form fields similar to Register Student -->
+
+  <input type="submit" value="Save Changes">
+</form>
+
+<a href="/eregistrar/students">Back to Student List</a>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>eRegistrar - Delete Student</title>
+</head>
+<body>
+<h1>Delete Student</h1>
+
+<p>Are you sure you want to delete the student with ID <span th:text="${student.studentId}"></span>?</p>
+
+<form th:action="@{/eregistrar/delete/{id}(id=${student.studentId})}" method="post">
+  <input type="hidden" id="studentId" name="studentId" th:value="${student.studentId}">
+  <input type="submit" value="Delete">
+</form>
+
+<a href="/eregistrar/students">Cancel</a>
+</body>
+</html>
